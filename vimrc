@@ -62,10 +62,6 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-set statusline+=\
-set statusline+=\ TIME: 
-set statusline+=\ %{strftime('%H:%M:%S')}
-set statusline+=\ 
 
 
 "" Advanced
