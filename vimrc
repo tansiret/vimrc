@@ -113,7 +113,7 @@ highlight LineNr ctermfg=lightgray ctermbg=black
 "" Statusline
 set statusline=
 set statusline+=%#PmenuSel#
-set statusline+=%#CursorLine#
+set statusline+=%#StatusLineNC#
 set statusline+=\ %f
 set statusline+=%m\
 set statusline+=%=
