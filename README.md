@@ -18,14 +18,14 @@ Clone the vimrc config file with either wget or curl
 
 ```bash
 wget https://github.com/Yutyo/vimrc/archive/master.zip
-unzip master.zip ~/.vim
+unzip master.zip -d ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
 or
 
 ```
 curl -LO https://github.com/Yutyo/vimrc/archive/master.zip
-unzip master.zip ~/.vim
+unzip master.zip -d ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
 
