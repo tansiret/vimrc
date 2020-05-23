@@ -3,6 +3,7 @@
 
 "" General
 set number      " Show line numbers
+set relativenumber      " Show numbers relative to the current line
 syntax on       " Enable syntax highlighting
 set linebreak   " Break lines at word (requires Wrap lines)
 set showbreak=+++       " Wrap-broken line prefix
@@ -95,3 +96,4 @@ cnoremap jk <C-C> " Easy navigation within the file
 
 "" Theme
 colorscheme industry    " Default theme (change here for your preference)
+highlight LineNr ctermfg=darkgray ctermbg=lightgray
