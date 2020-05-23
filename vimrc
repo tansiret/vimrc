@@ -83,7 +83,7 @@ cnoremap jk <C-C> " Easy navigation within the file
 
 "" Theme
 colorscheme industry    " Default theme (change here for your preference)
-highlight LineNr ctermfg=lightgray ctermbg=black
+highlight LineNr ctermfg=black ctermbg=lightgray
 
 
 "" Statusline
@@ -101,28 +101,3 @@ set statusline+=\ %l:%c
 set statusline+=\  
 set statusline+=\ TIME:
 set statusline+=\ %{strftime('%H:%M')}
-
-" Statusline changin color when the mod changes
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-endif
-
-function! InsertStatuslineColor(mode)
-  if a:mode == 'i'
-    hi statusline guibg=magenta
-  elseif a:mode == 'r'
-    hi statusline guibg=blue
-  else
-    hi statusline guibg=red
-  endif
-endfunction
-
-au InsertEnter * call InsertStatuslineColor(v:insertmode)
-au InsertChange * call InsertStatuslineColor(v:insertmode)
-au InsertLeave * hi statusline guibg=green
-
-" Default the statusline to green when entering Vim
-hi statusline guibg=green
-
-
