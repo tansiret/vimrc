@@ -63,7 +63,7 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-set statusline+=\ TIME: %{strftime('%H:%M')}
+set statusline+=\ %{strftime('%H:%M')}
 set statusline+=\ 
 
 call SetBatteryLevel(0)
