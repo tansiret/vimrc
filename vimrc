@@ -70,7 +70,6 @@ set statusline+=\
 
 "" Advanced
 set ruler       " Show row and column ruler information
-set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)°
 set undolevels=1000     " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
 
