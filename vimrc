@@ -10,7 +10,6 @@ set textwidth=100       " Line wrap (number of cols)
 set showmatch   " Highlight matching brace
 set visualbell  " Use visual bell (no beeping)
 set mouse=a     " Enable use of the mouse for all modes
-set nowrap      " Display 
 
 set laststatus=2        " Show the current file at the bottom
 
@@ -75,8 +74,6 @@ set nowritebackup       " No backup
 
 set clipboard=unnamed   " Saves copied text from vim to general clipboard
 set clipboard=unnamedplus       " Saves copied text from vim ro general clipboard
-
-map Y y$       " Yank to act as c and d
 
 " Shortcuts for generic commands as alias to vim commands
 :map <C-a> GVgg         " Select all 
