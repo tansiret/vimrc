@@ -40,21 +40,6 @@ set showmatch   " highlight matching [{()}]
 set incsearch   " search as characters are entered
 set hlsearch    " highlight matches
 
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%#LineNr#
-set statusline+=\ %f
-set statusline+=%m\
-set statusline+=%=
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\  
-set statusline+=\ TIME:
-set statusline+=\ %{strftime('%H:%M')}
 
 "" Advanced
 set ruler       " Show row and column ruler information
@@ -73,8 +58,8 @@ set clipboard=unnamedplus       " Saves copied text from vim ro general clipboar
 :map <C-n> :enew        " Open new file 
 :map <C-o> :e . <Enter> " Open file
 :map <C-s> :w <Enter>   " Save file (use ctrl q afterwards)
-:map <C-c> "y           " Copy
-:map <C-v> "p           " Paste
+:map <C-c> y           " Copy
+:map <C-v> p           " Paste
 :map <C-x> d            " Cut
 :map <C-z> u            " Undo
 :map <C-t> :tabnew <Enter>      " Open new tab within vim
@@ -99,3 +84,45 @@ cnoremap jk <C-C> " Easy navigation within the file
 "" Theme
 colorscheme industry    " Default theme (change here for your preference)
 highlight LineNr ctermfg=lightgray ctermbg=black
+
+
+"" Statusline
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%#LineNr#
+set statusline+=\ %f
+set statusline+=%m\
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=\  
+set statusline+=\ TIME:
+set statusline+=\ %{strftime('%H:%M')}
+
+" Statusline changin color when the mod changes
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
+
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline guibg=magenta
+  elseif a:mode == 'r'
+    hi statusline guibg=blue
+  else
+    hi statusline guibg=red
+  endif
+endfunction
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertChange * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * hi statusline guibg=green
+
+" Default the statusline to green when entering Vim
+hi statusline guibg=green
+
+
