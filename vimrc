@@ -52,7 +52,9 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-set statusline+=\ 
+set statusline+=\  
+set statusline+=\ TIME:
+set statusline+=\ %{strftime('%H:%M')}
 
 "" Advanced
 set ruler       " Show row and column ruler information
@@ -96,4 +98,4 @@ cnoremap jk <C-C> " Easy navigation within the file
 
 "" Theme
 colorscheme industry    " Default theme (change here for your preference)
-highlight LineNr ctermfg=darkgray ctermbg=lightgray
+highlight LineNr ctermfg=lightgray ctermbg=black
