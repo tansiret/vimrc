@@ -1,5 +1,5 @@
 # vimrc
-Great and easy vimrc config. Make your vim much better and easier without any plugins or tweaks but only with this custom vimrc file.
+KISSest vimrc config evet made. Its great and simple. Make your vim much better and easier without any plugins or tweaks but only with this custom vimrc file.
 ![Vim, as seen with this .vimrc config](screenshot.jpeg "Yes, that is just made with .vimrc")
 
 ## Installation
@@ -28,3 +28,4 @@ curl -LO https://github.com/Yutyo/vimrc/archive/master.zip
 unzip master.zip ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
+
