@@ -1,6 +1,6 @@
 # vimrc
 Great .vimrc config. Make your vim function and look better without any plugins but only with built-in config settings.
-![Vim, as seen with this .vimrc config](screenshot.jpg "Yes, that is just made with .vimrc")
+![Vim, as seen with this .vimrc config](screenshot.jpeg "Yes, that is just made with .vimrc")
 
 ## Installation
 
