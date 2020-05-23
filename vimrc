@@ -63,10 +63,10 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
+set statusline+=\ TIME: 
 set statusline+=\ %{strftime('%H:%M')}
 set statusline+=\ 
 
-call SetBatteryLevel(0)
 
 "" Advanced
 set ruler       " Show row and column ruler information
