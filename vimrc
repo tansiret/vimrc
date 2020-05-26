@@ -126,32 +126,36 @@ set statusline+=\
 set statusline+=\ TIME:
 set statusline+=\ %{strftime('%H:%M')}
 
-" Toggle Lexplore with Ctrl-E
-com!  -nargs=* -bar -bang -complete=dir  Lexplore  call netrw#Lexplore(<q-args>, <bang>0)
+" Toggle Vexplore with Ctrl-O
+function! ToggleVExplorer()
+    if exists("t:expl_buf_num")
+        let expl_win_num = bufwinnr(t:expl_buf_num)
+        let cur_win_num = winnr()
 
-fun! Lexplore(dir, right)
-  if exists("t:netrw_lexbufnr")
-  " close down netrw explorer window
-  let lexwinnr = bufwinnr(t:netrw_lexbufnr)
-  if lexwinnr != -1
-    let curwin = winnr()
-    exe lexwinnr."wincmd w"
-    close
-    exe curwin."wincmd w"
-  endif
-  unlet t:netrw_lexbufnr
+        if expl_win_num != -1
+            while expl_win_num != cur_win_num
+                exec "wincmd w"
+                let cur_win_num = winnr()
+            endwhile
 
-  else
-    " open netrw explorer window in the dir of current file
-    " (even on remote files)
-    let path = substitute(exists("b:netrw_curdir")? b:netrw_curdir : expand("%:p"), '^\(.*[/\\]\)[^/\\]*$','\1','e')
-    exe (a:right? "botright" : "topleft")." vertical ".((g:netrw_winsize > 0)? (g:netrw_winsize*winwidth(0))/100 : -g:netrw_winsize) . " new"
-    if a:dir != ""
-      exe "Explore ".a:dir
+            close
+        endif
+
+        unlet t:expl_buf_num
     else
-      exe "Explore ".path
+         Vexplore
+         let t:expl_buf_num = bufnr("%")
     endif
-    setlocal winfixwidth
-    let t:netrw_lexbufnr = bufnr("%")
-  endif
-endfun
+endfunction
+
+map <silent> <C-O> :call ToggleVExplorer()<CR>
+
+let g:netrw_winsize = -28 " absolute width of netrw window 
+
+let g:netrw_banner = 0 " do not display info on the top of window
+
+let g:netrw_liststyle = 3 " tree-view
+
+let g:netrw_sort_sequence = '[\/]$,*' " sort is affecting only: directories on the top, files below
+
+let g:netrw_browse_split = 4 " use the previous window to open file
