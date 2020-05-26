@@ -146,3 +146,11 @@ function! ToggleVExplorer()
   endif
 endfunction
 map <silent> <C-E> :call ToggleVExplorer()<CR>
+
+" Hit enter in the file browser to open the selected file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+set autochdir " Change directory to the current buffer when opening files.
+
+let g:netrw_winsize = 25 " tree window size
