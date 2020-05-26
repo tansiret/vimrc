@@ -28,4 +28,11 @@ curl -LO https://github.com/Yutyo/vimrc/archive/master.zip
 unzip master.zip -d ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
-
+## Thanks
+Thanks to the people that made those publicizations about vim configuration:
+- https://shapeshed.com/vim-statuslines/
+- https://shapeshed.com/vim-netrw/
+- https://vim.fandom.com/wiki/Example_vimrc
+- https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
+- https://vimconfig.com/
+- https://github.com/tylerlum/vim_configuration

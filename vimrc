@@ -20,6 +20,7 @@ set showtabline=2       " Show vim tab pages all time
 set hlsearch    " Highlight all search results
 set smartcase   " Enable smart-case search
 set ignorecase  " Always case-insensitive
+set nowrap      " Don't wrap the lines
 set incsearch   " Searches for strings incrementally
 
 set autoindent  " Auto-indent new lines
