@@ -154,3 +154,4 @@ let g:netrw_altv = 1
 set autochdir " Change directory to the current buffer when opening files.
 
 let g:netrw_winsize = 25 " tree window size
+let g:netrw_banner = 0 " hide banner
