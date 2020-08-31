@@ -79,11 +79,11 @@ set clipboard=unnamedplus       " Saves copied text from vim ro general clipboar
 " Close the tab
 :map <C-W> :q! <Enter>  
 " Quit vim and close the window
-:map <C-f> /            
+:map <C-f> /
 " Search
 :map <F3> n             
 " Search the latest action 
-:map <C-h> :%s/         
+:map <C-h> :%s/
 " Search and replace syntax
 :map <S-t> vat          
 " Enter visual mode 
