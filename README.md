@@ -9,7 +9,7 @@ Clone the repo with git and obtain vimrc config file.
 
 ```bash
 cd ~
-git clone git://github.com/yutyo/vimrc.git .vim
+git clone git://github.com/tansiret/vimrc.git .vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
 
@@ -17,14 +17,14 @@ ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 Clone the vimrc config file with either wget or curl
 
 ```bash
-wget https://github.com/Yutyo/vimrc/archive/master.zip
+wget https://github.com/tansiret/vimrc/archive/master.zip
 unzip master.zip -d ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
 or
 
 ```
-curl -LO https://github.com/Yutyo/vimrc/archive/master.zip
+curl -LO https://github.com/tansiret/vimrc/archive/master.zip
 unzip master.zip -d ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc # Optional, needed for some VIM installations
 ```
